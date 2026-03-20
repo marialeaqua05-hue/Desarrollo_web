@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Muñoz Carlón María Leticia - Ejercicio 21</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #f4f4f9; 
+            color: #333; 
+            padding: 40px; 
+        }
+        .contenedor { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+            max-width: 400px; 
+            margin: 0 auto; 
+        }
+        h1 { color: #4f46e5; font-size: 24px; text-align: center; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; }
+        
+        /* Estilos para el formulario */
+        .grupo-input { margin-bottom: 15px; }
+        label { display: block; font-weight: bold; margin-bottom: 5px; }
+        input[type="number"] { 
+            width: 100%; 
+            padding: 10px; 
+            border: 1px solid #ccc; 
+            border-radius: 5px; 
+            box-sizing: border-box; /* Para que el padding no desborde el ancho */
+        }
+        
+        /* Estilos para los botones */
+        .botones { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; margin-bottom: 20px; }
+        button { 
+            background: #4f46e5; 
+            color: white; 
+            border: none; 
+            padding: 10px; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        button:hover { background: #4338ca; }
+        
+        .resultado { 
+            background-color: #e0e7ff; 
+            border-left: 4px solid #4f46e5; 
+            padding: 15px; 
+            font-size: 18px; 
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <h1>Calculadora JS</h1>
+        
+        <form id="formulario-calc">
+            <div class="grupo-input">
+                <label for="num1">Valor A:</label>
+                <input type="number" id="num1" placeholder="Ingresa el primer número" required>
+            </div>
+            
+            <div class="grupo-input">
+                <label for="num2">Valor B:</label>
+                <input type="number" id="num2" placeholder="Ingresa el segundo número" required>
+            </div>
+
+            <div class="botones">
+                <button type="button" onclick="ejecutarSuma()">Sumar (+)</button>
+                <button type="button" onclick="ejecutarResta()">Restar (-)</button>
+                <button type="button" onclick="ejecutarDivision()">Dividir (/)</button>
+                <button type="button" onclick="ejecutarExponenciacion()">Exponente (^)</button>
+            </div>
+        </form>
+
+        <div id="pantalla-resultados">
+            <div class="resultado">Esperando operación...</div>
+        </div>
+    </div>
+
+    <script src="operaciones.js"></script>
+
+</body>
+</html>
