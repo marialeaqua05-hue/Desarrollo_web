@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Muñóz Carlón María Leticia </title>
+    <style>
+        /* Paleta de colores rosas */
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #ffe4e1; /* Rosa claro (MistyRose) */
+            color: #5c1a3b; 
+            padding: 40px; 
+            display: flex;
+            justify-content: center;
+        }
+        .contenedor { 
+            background: #fff0f5; /* Rosa lavanda (LavenderBlush) */
+            padding: 30px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 10px rgba(219, 112, 147, 0.3); 
+            max-width: 350px; 
+            width: 100%;
+            border: 2px solid #ffb6c1; /* Rosa pastel */
+        }
+        h1 { 
+            color: #ff1493; /* Rosa profundo (DeepPink) */
+            font-size: 22px; 
+            text-align: center; 
+            border-bottom: 2px solid #ffb6c1; 
+            padding-bottom: 10px; 
+        }
+        .grupo-input { margin-bottom: 15px; }
+        label { 
+            display: block; 
+            font-weight: bold; 
+            margin-bottom: 5px; 
+            color: #db7093; /* Rosa viejo (PaleVioletRed) */
+        }
+        input[type="number"] { 
+            width: 100%; 
+            padding: 10px; 
+            border: 1px solid #ffb6c1; 
+            border-radius: 5px; 
+            box-sizing: border-box;
+            background-color: #fffafa;
+        }
+        input[type="number"]:focus {
+            outline: none;
+            border-color: #ff69b4; /* HotPink */
+        }
+        button { 
+            width: 100%;
+            background: #ff69b4; /* HotPink */
+            color: white; 
+            border: none; 
+            padding: 12px; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+        button:hover { 
+            background: #ff1493; /* DeepPink */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <h1>Fórmula General</h1>
+        
+        <form id="formulario-cuadratica">
+            <div class="grupo-input">
+                <label for="valA">Valor de a:</label>
+                <input type="number" id="valA" placeholder="Ej: 1" required>
+            </div>
+            
+            <div class="grupo-input">
+                <label for="valB">Valor de b:</label>
+                <input type="number" id="valB" placeholder="Ej: -5" required>
+            </div>
+
+            <div class="grupo-input">
+                <label for="valC">Valor de c:</label>
+                <input type="number" id="valC" placeholder="Ej: 6" required>
+            </div>
+
+            <button type="button" onclick="calcularRaices()">Calcular x1 y x2</button>
+        </form>
+    </div>
+
+    <script>
+        function calcularRaices() {
+            // 1. Obtener y convertir los valores a números (parseFloat)
+            let a = parseFloat(document.getElementById("valA").value);
+            let b = parseFloat(document.getElementById("valB").value);
+            let c = parseFloat(document.getElementById("valC").value);
+
+            // Validación: Verificar que los campos no estén vacíos
+            if (isNaN(a) || isNaN(b) || isNaN(c)) {
+                alert("🌸 Por favor, ingresa los tres valores (a, b y c).");
+                return;
+            }
+
+            // Validación: En una ecuación cuadrática, 'a' no puede ser 0
+            if (a === 0) {
+                alert("🌸 El valor de 'a' no puede ser 0, de lo contrario no sería una ecuación cuadrática.");
+                return;
+            }
+
+            // 2. Calcular el discriminante (lo que va dentro de la raíz cuadrada)
+            // Fórmula del discriminante: b^2 - 4ac
+            let discriminante = (b ** 2) - (4 * a * c);
+
+            // 3. Evaluar el discriminante para saber qué tipo de resultado es
+            if (discriminante > 0) {
+                // Tiene dos soluciones reales diferentes
+                let x1 = (-b + Math.sqrt(discriminante)) / (2 * a);
+                let x2 = (-b - Math.sqrt(discriminante)) / (2 * a);
+                
+                // Mostrar alerta con plantillas literales para saltos de línea (\n)
+                alert(`🌸 ¡Cálculo exitoso!\n\nx1 = ${x1.toFixed(2)}\nx2 = ${x2.toFixed(2)}`);
+
+            } else if (discriminante === 0) {
+                // Tiene una sola solución real (ambas raíces son iguales)
+                let x = -b / (2 * a);
+                alert(`🌸 La ecuación tiene una solución única:\n\nx1 y x2 = ${x.toFixed(2)}`);
+
+            } else {
+                // Si el discriminante es negativo, la raíz cuadrada daría un número imaginario
+                alert("🌸 La ecuación no tiene soluciones en los números reales (raíces imaginarias).");
+            }
+        }
+    </script>
+
+</body>
+</html>
