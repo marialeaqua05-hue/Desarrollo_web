@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Muñoz Carlón María Leticia - Ejercicio 20 </title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #f4f4f9; 
+            color: #333; 
+            padding: 40px; 
+        }
+        .contenedor { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+            max-width: 500px; 
+            margin: 0 auto; 
+        }
+        h1 { color: #4f46e5; font-size: 24px; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; }
+        .operacion { 
+            background-color: #f8fafc; 
+            border-left: 4px solid #4f46e5; 
+            padding: 12px; 
+            margin-bottom: 10px; 
+            font-size: 18px; 
+        }
+        .valores { font-size: 16px; margin-bottom: 20px; color: #666; }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <h1>Resultados Matemáticos</h1>
+        <div class="valores">
+            <p>Valores iniciales asignados en JavaScript:</p>
+            <ul>
+                <li><strong>Número 1:</strong> <span id="num1"></span></li>
+                <li><strong>Número 2:</strong> <span id="num2"></span></li>
+            </ul>
+        </div>
+        
+        <div id="pantalla-resultados"></div>
+    </div>
+
+    <script src="operaciones.js"></script>
+
+</body>
+</html>
