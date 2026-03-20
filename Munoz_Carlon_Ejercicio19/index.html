@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Muñoz Carlón María Leticia - Ejercicio 19 </title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f4f4f9; }
+        .container { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        button { background: #4f46e5; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #4338ca; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1> Mis Datos Personales </h1>
+        
+        <p id="datos-carrera"></p>
+
+        <button onclick="mostrarAlerta()"> Muñoz Carlón </button>
+    </div>
+
+    <script>
+        // 1. Modificar un elemento HTML (innerHTML)
+        // Es la forma más común de mostrar datos en una página web.
+        document.getElementById("datos-carrera").innerHTML = "<strong>Carrera:</strong> Ingeniería en Software";
+
+        // 2. Escribir directamente en el documento (document.write)
+        // Solo debe usarse para pruebas, ya que si se ejecuta después de que la página cargó, borrará todo el HTML.
+        document.write("<div class='container' style='margin-top: 20px;'><strong>Materia actual:</strong> Desarrollo Web </div>");
+
+        // 3. Ventana de alerta (window.alert)
+        // Muestra un cuadro de diálogo al usuario. Aquí lo pusimos dentro de una función que se activa con el botón.
+        function mostrarAlerta() {
+            window.alert("¡Hola! Soy estudiante de la FIM.");
+        }
+
+        // 4. Consola del navegador (console.log)
+        // Se usa para depuración. Los usuarios no lo ven a menos que abran las herramientas de desarrollador (F12).
+        console.log("Datos cargados correctamente. Proyecto en curso: Ejercicio Web.");
+    </script>
+
+</body>
+</html>
