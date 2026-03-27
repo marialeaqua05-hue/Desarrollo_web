@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Tablas Dinámico</title>
+    <link rel="stylesheet" href="estilos_tablas.css">
+</head>
+<body>
+
+    <div class="contenedor">
+        <h1>Generador de Tablas</h1>
+        
+        <div class="grupo-input">
+            <label for="limite">¿Hasta qué tabla quieres generar?</label>
+            <input type="number" id="limite" min="1" placeholder="Ingresa un número entero positivo (Ej: 5)">
+        </div>
+        
+        <button type="button" onclick="generarTablas()" id="btn-generar">Generar tablas de multiplicar</button>
+        
+        <div id="contenedor-tablas" class="grid-tablas"></div>
+    </div>
+
+    <script src="script_tablas.js"></script>
+
+</body>
+</html>
