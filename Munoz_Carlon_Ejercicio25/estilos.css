@@ -1,0 +1,75 @@
+/* estilos.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2a7d3; /* Rosa pastel de fondo */
+    color: #f0058e; /* Rosa fuerte para los textos principales */
+    margin: 0;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(240, 5, 142, 0.2);
+    max-width: 1000px;
+    width: 100%;
+    text-align: center;
+    border-top: 8px solid #fa64bb; /* Rosa medio */
+}
+
+h1 {
+    color: #f0058e;
+    margin-bottom: 25px;
+}
+
+button {
+    background-color: #fa64bb;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 30px;
+}
+
+button:hover {
+    background-color: #f0058e; /* Cambia al rosa fuerte al pasar el mouse */
+}
+
+/* Sistema de cuadrícula para acomodar las 10 tablas */
+.grid-tablas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Diseño individual de cada tabla */
+.tabla-card {
+    background-color: #fff0f6; /* Un fondo blanco con toque muy ligero de rosa */
+    border: 2px solid #f2a7d3;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: left;
+}
+
+.tabla-card h2 {
+    color: #fa64bb;
+    text-align: center;
+    margin-top: 0;
+    border-bottom: 2px dashed #f2a7d3;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+
+.tabla-card p {
+    margin: 6px 0;
+    font-size: 16px;
+    color: #444; /* Gris oscuro para que los números se lean bien */
+}
