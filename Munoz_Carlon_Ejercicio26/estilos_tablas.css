@@ -1,0 +1,104 @@
+/* estilos_tablas.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2a7d3; /* Rosa pastel de fondo */
+    color: #f0058e; 
+    margin: 0;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(240, 5, 142, 0.2);
+    max-width: 1000px;
+    width: 100%;
+    text-align: center;
+    border-top: 8px solid #fa64bb;
+}
+
+h1 {
+    color: #f0058e;
+    margin-bottom: 20px;
+}
+
+/* Nuevos estilos para el input del usuario */
+.grupo-input {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #fa64bb;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+input[type="number"] {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px;
+    border: 2px solid #f2a7d3;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #f0058e;
+    outline: none;
+    text-align: center;
+}
+
+input[type="number"]:focus {
+    border-color: #f0058e;
+}
+
+button {
+    background-color: #fa64bb;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 30px;
+}
+
+button:hover {
+    background-color: #f0058e; 
+}
+
+/* Sistema de cuadrícula para acomodar las tablas */
+.grid-tablas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.tabla-card {
+    background-color: #fff0f6; 
+    border: 2px solid #f2a7d3;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: left;
+}
+
+.tabla-card h2 {
+    color: #fa64bb;
+    text-align: center;
+    margin-top: 0;
+    border-bottom: 2px dashed #f2a7d3;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+
+.tabla-card p {
+    margin: 6px 0;
+    font-size: 16px;
+    color: #444; 
+}
